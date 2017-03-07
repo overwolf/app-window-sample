@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Unsupported app</title>
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/style.css">
+			<script>
+			
+			function dragMove(){
+				overwolf.windows.getCurrentWindow(function(result){
+					if (result.status=="success"){
+						overwolf.windows.dragMove(result.window.id);
+					}
+				});
+			};
+			
+			function closeWindow(){
+				overwolf.windows.getCurrentWindow(function(result){
+					if (result.status=="success"){
+						overwolf.windows.close(result.window.id);
+					}
+				});
+			};
+
+		</script>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+<symbol id="window-control_close" viewBox="0 0 30 30">
+	<path d="M15.7,15l5.1-5.1a.5.5,0,0,0-.7-.7L15,14.3,9.9,9.1a.5.5,0,0,0-.7.7L14.3,15,9.1,20.1a.5.5,0,0,0,0,.7h.7L15,15.7l5.1,5.1h.7a.5.5,0,0,0,0-.7Z" />
+</symbol>
+
+<symbol id="unsupported-app" viewBox="0 0 80 80">
+	<path d="M59.5,35.1a3.4,3.4,0,1,0-2-4.4A3.4,3.4,0,0,0,59.5,35.1Zm-.4-3.8a1.7,1.7,0,1,1,1,2.2A1.7,1.7,0,0,1,59.1,31.3Zm-2.5-.9a3.4,3.4,0,1,0-4.4,2A3.4,3.4,0,0,0,56.7,30.4Zm-3.8.4a1.7,1.7,0,1,1,2.2-1A1.7,1.7,0,0,1,52.9,30.9ZM20,14.1a4,4,0,1,0,4.6,3.2A4,4,0,0,0,20,14.1ZM21,20a2,2,0,1,1,1.6-2.3A2,2,0,0,1,21,20ZM67.7,73.2C62.9,67.5,55.6,63.5,47.1,62l7.2-19.7L59,43.9a1,1,0,0,0,1.1-.5l1.2-3.2c.4-1.2,1.2-.9,2.2-1s2.5-1.9,3.9-5.8-1.9-10.6-6.4-12.3-11.1.6-12.8,5.3-1.4,6.3-.7,7,1.4,1.2,1,2.2l-1.2,3.2a1,1,0,0,0,.5,1.1l4.7,1.7L45.1,61.7a40.1,40.1,0,0,0-10.6,0L29,30.8l5.9-1a1.1,1.1,0,0,0,.8-1.2l-.7-3.9c-.3-1.5.7-1.7,1.6-2.3s1.4-3.4.6-8.2S29.1,4.3,23.5,5.3s-10.9,7.1-9.9,12.9,2.3,7.2,3.4,7.5,2.1.5,2.3,1.6l.7,3.9a1.1,1.1,0,0,0,1.2.8l5.9-1L32.5,62C24.2,63.6,17,67.6,12.3,73.2a1,1,0,0,0,1.5,1.3h0C19.5,67.8,29.1,63.3,40,63.3s20.5,4.5,26.1,11.1a1,1,0,0,0,1.5-1.3Zm-16-33.7.6-1.6a1,1,0,1,0-1.9-.7l-.6,1.6-.7-.2.9-2.4A3.3,3.3,0,0,0,49,32.5l-.3-.3s-.5-.9,1.1-5.3,7-5.6,10.6-4.3,6.8,6.2,5.4,10.1-2.3,4.5-2.6,4.7h-.3a3.1,3.1,0,0,0-3.2,2.1L58.8,42l-.7-.2.6-1.6a1,1,0,1,0-1.9-.7l-.6,1.6-1.3-.5.6-1.6a1,1,0,0,0-1.9-.7L53,40ZM28.3,26.8a1,1,0,1,0-2,.3l.3,2-2,.3h0l-.3-2a1,1,0,1,0-2,.3l.3,2-1,.2-.5-3A3.9,3.9,0,0,0,18,24h-.4s-1.1-.6-2-6,3.9-9.8,8.3-10.6,10.6,2.4,11.4,7.1.3,5.9.1,6.3l-.3.2a3.6,3.6,0,0,0-2,4l.5,3-1,.2-.3-2a1,1,0,0,0-2,.3l.3,2-2,.3Zm5.2-11.1a4,4,0,1,0-3.2,4.6A4,4,0,0,0,33.6,15.7Zm-5.9,1A2,2,0,1,1,30,18.4,2,2,0,0,1,27.6,16.8Z" />
+</symbol>
+
+</svg>
+
+	<main onmousedown="dragMove();">
+
+
+		<i class="unsupported-app">
+			<svg class="svg-icon-fill">
+				<use xlink:href="#unsupported-app" />
+			</svg>
+		</i>
+
+		<h1>Sample app</h1>
+		<p>Lorem ipsum dolor sit amet, id utroque facilisi praesent sit. Vis discere vivendum adversarium ne. Sed no quaeque platonem.</p>
+		<p>Propriae vituperata ei vel, nullam putent nec ne. Ut ornatus recteque patrioque eos.</p>
+		<p>An per duis vivendo. Pri in exerci scribentur, vix justo paulo virtute et. Qui ex tractatos interesset. Alii commune deseruisse ius no.</p>
+		<i class="window-controls" onclick="closeWindow();">
+			<svg class="svg-icon-fill">
+				<use xlink:href="#window-control_close" />
+			</svg>
+		</i>
+	</main>
+
+</body>
+</html>
